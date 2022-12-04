@@ -1,7 +1,7 @@
-from typing import List
+from typing import Callable, List
 
 
-def get_overlaps(data: List[str], overlap_func) -> int:
+def get_overlaps(data: List[str], overlap_func: Callable[List[int], List[int]]) -> int:
     pairs = [line.split(',') for line in data]
     
     overlaps = 0
